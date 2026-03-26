@@ -9,6 +9,14 @@ function matchPhotoToName() {
 window.addEventListener('load', matchPhotoToName);
 window.addEventListener('resize', matchPhotoToName);
 
+// Hamburger menu
+const hamburger = document.getElementById('nav-hamburger');
+const mobileMenu = document.getElementById('nav-mobile-menu');
+hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+document.querySelectorAll('#nav-mobile-menu a').forEach(link => {
+  link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+});
+
 // Dark mode toggle
 const toggle = document.getElementById('dark-toggle');
 const root = document.documentElement;

@@ -556,12 +556,96 @@ footer {
 
 .btn-submit:hover { opacity: 0.88; transform: translateY(-2px); }
 
+/* ===== NAV RIGHT (toggle + hamburger) ===== */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#nav-hamburger {
+  display: none;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: var(--white);
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+#nav-mobile-menu {
+  display: none;
+  background: rgba(13,27,42,0.98);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+#nav-mobile-menu.open { display: block; }
+
+#nav-mobile-menu ul {
+  list-style: none;
+  padding: 12px 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#nav-mobile-menu a {
+  display: block;
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: color 0.2s;
+}
+
+#nav-mobile-menu a:hover { color: var(--accent); }
+
 /* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .container { padding: 60px 20px; }
+  .achievements-grid { grid-template-columns: 1fr 1fr; }
+  .skills-grid { grid-template-columns: 1fr 1fr; }
+  .achievement-stat { font-size: 2rem; }
+}
+
+/* Mobile */
 @media (max-width: 600px) {
-  nav ul { gap: 16px; }
-  .nav-name { display: none; }
-  .timeline-header { flex-direction: column; }
-  .education-card { flex-direction: column; }
+  /* Nav */
+  nav ul { display: none; }
+  #nav-hamburger { display: block; }
+  .nav-name { font-size: 0.9rem; }
+
+  /* Hero */
+  #hero { padding: 80px 20px 50px; }
+  .hero-cta { flex-direction: column; align-items: center; }
+  .btn-primary, .btn-secondary { width: 100%; max-width: 280px; text-align: center; }
+
+  /* Container */
+  .container { padding: 50px 16px; }
+
+  /* Skills */
+  .skills-grid { grid-template-columns: 1fr; }
+
+  /* Achievements */
+  .achievements-grid { grid-template-columns: 1fr; }
+
+  /* Timeline */
+  .timeline { padding-left: 24px; }
+  .timeline-marker { left: -22px; }
+  .timeline-content { padding: 18px 16px; }
+  .timeline-header { flex-direction: column; gap: 4px; }
+
+  /* Education */
+  .education-card { flex-direction: column; padding: 20px; }
+
+  /* Contact */
   .form-row { grid-template-columns: 1fr; }
-  .contact-form { padding: 24px 20px; }
+  .contact-form { padding: 24px 16px; }
+  .contact-links { flex-direction: column; align-items: center; }
 }
