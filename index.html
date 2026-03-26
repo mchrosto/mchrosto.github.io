@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; form-action 'self' https://formspree.io; connect-src 'self' https://formspree.io;">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="no-referrer">
   <title>Matthew Chrostowski | Data Professional</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -283,8 +286,8 @@
       <h2>Get in Touch</h2>
       <p class="contact-intro">Open to connecting with data professionals, recruiters, and collaborators.</p>
       <div class="contact-links">
-        <a href="mailto:mattchrosto@gmail.com" class="contact-item">
-          <span>&#128140;</span> mattchrosto@gmail.com
+        <a id="email-link" class="contact-item">
+          <span>&#128140;</span> <span id="email-label"></span>
         </a>
         <a href="https://www.linkedin.com/in/matthew-chrostowski/" target="_blank" class="contact-item">
           <span>&#128279;</span> LinkedIn

@@ -9,6 +9,19 @@ function matchPhotoToName() {
 window.addEventListener('load', matchPhotoToName);
 window.addEventListener('resize', matchPhotoToName);
 
+// Email obfuscation — assembled at runtime to avoid scraper harvesting
+(function() {
+  const u = 'mattchrosto';
+  const d = 'gmail.com';
+  const addr = u + '@' + d;
+  const link = document.getElementById('email-link');
+  const label = document.getElementById('email-label');
+  if (link && label) {
+    link.href = 'mailto:' + addr;
+    label.textContent = addr;
+  }
+})();
+
 // Hamburger menu
 const hamburger = document.getElementById('nav-hamburger');
 const mobileMenu = document.getElementById('nav-mobile-menu');
