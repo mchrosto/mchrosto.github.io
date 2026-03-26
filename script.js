@@ -1,3 +1,14 @@
+// Match headshot width to h1 name width
+function matchPhotoToName() {
+  const h1 = document.querySelector('#hero h1');
+  const photo = document.querySelector('.hero-photo');
+  if (h1 && photo) {
+    photo.style.width = h1.offsetWidth + 'px';
+  }
+}
+window.addEventListener('load', matchPhotoToName);
+window.addEventListener('resize', matchPhotoToName);
+
 // Dark mode toggle
 const toggle = document.getElementById('dark-toggle');
 const root = document.documentElement;

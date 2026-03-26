@@ -119,14 +119,13 @@ nav a:hover { color: var(--accent); }
 }
 
 .hero-photo {
-  width: 80px;
-  height: 80px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--mid);
   box-shadow: 0 0 0 4px rgba(0,194,168,0.15), var(--shadow);
   margin: 0 auto 16px;
   display: block;
+  height: auto;
 }
 
 .hero-label {
