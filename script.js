@@ -1,3 +1,19 @@
+// Dark mode toggle
+const toggle = document.getElementById('dark-toggle');
+const root = document.documentElement;
+
+const savedTheme = localStorage.getItem('theme') || 'light';
+root.setAttribute('data-theme', savedTheme);
+toggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+
+toggle.addEventListener('click', () => {
+  const isDark = root.getAttribute('data-theme') === 'dark';
+  const next = isDark ? 'light' : 'dark';
+  root.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+  toggle.textContent = next === 'dark' ? '☀️' : '🌙';
+});
+
 // Active nav link highlighting on scroll
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('nav a');
