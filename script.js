@@ -3,7 +3,7 @@ function matchPhotoToName() {
   const h1 = document.querySelector('#hero h1');
   const photo = document.querySelector('.hero-photo');
   if (h1 && photo) {
-    photo.style.width = h1.offsetWidth + 'px';
+    photo.style.width = (h1.offsetWidth * 0.7) + 'px';
   }
 }
 window.addEventListener('load', matchPhotoToName);
