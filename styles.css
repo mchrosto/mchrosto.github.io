@@ -195,6 +195,19 @@ nav a:hover { color: var(--accent); }
 /* ===== SKILLS ===== */
 #skills { background: var(--white); }
 
+.skills-categories { display: flex; flex-direction: column; gap: 40px; }
+
+.skills-category-label {
+  font-size: 1.25rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--navy);
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--accent);
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -281,6 +294,46 @@ nav a:hover { color: var(--accent); }
   line-height: 1.5;
 }
 
+/* ===== EXPERIENCE CARDS ===== */
+.experience-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.experience-box {
+  background: var(--white);
+  border: 2px solid var(--mid);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  box-shadow: var(--shadow);
+}
+
+.experience-box-label {
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--navy);
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--accent);
+}
+
+.experience-box ul {
+  padding-left: 16px;
+  color: var(--text);
+  font-size: 0.88rem;
+  list-style: disc;
+}
+
+.experience-box li { margin-bottom: 5px; }
+
+[data-theme="dark"] .experience-box { background: #0f1923; border-color: #2a3548; }
+[data-theme="dark"] .experience-box-label { color: #e2e8f0; }
+[data-theme="dark"] .skills-category-label { color: #e2e8f0; }
+
 /* ===== EXPERIENCE / TIMELINE ===== */
 #experience { background: var(--light); }
 
@@ -359,6 +412,11 @@ nav a:hover { color: var(--accent); }
 }
 
 .timeline-content li { margin-bottom: 6px; }
+
+/* ===== CERTIFICATIONS ===== */
+#certifications { background: var(--light); }
+
+.certifications-list { display: flex; flex-direction: column; gap: 16px; }
 
 /* ===== EDUCATION ===== */
 #education { background: var(--white); }
@@ -469,7 +527,9 @@ footer {
 [data-theme="dark"] #achievements { background: #060e18; }
 [data-theme="dark"] .skill-card { background: #1a2332; border-color: #2a3548; }
 [data-theme="dark"] .timeline-content { background: #0f1923; }
+[data-theme="dark"] #certifications { background: #1a2332; }
 [data-theme="dark"] .education-card { background: #1a2332; }
+[data-theme="dark"] .skills-category-label { border-color: #2a3548; }
 [data-theme="dark"] .timeline-marker { border-color: #0f1923; }
 [data-theme="dark"] .contact-form { background: #0f1923; }
 [data-theme="dark"] .contact-form input,
@@ -634,6 +694,9 @@ footer {
 
   /* Achievements */
   .achievements-grid { grid-template-columns: 1fr; }
+
+  /* Experience cards */
+  .experience-boxes { grid-template-columns: 1fr; }
 
   /* Timeline */
   .timeline { padding-left: 24px; }
